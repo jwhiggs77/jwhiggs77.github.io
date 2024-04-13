@@ -3,7 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Call Example</title>
+    <title>Masters Scramble Score Card</title>
+
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          font-size: 24px;
+      }
+      h1 {
+          color: #333;
+          font-size: 50px;
+      }
+      button {
+          font-size: 24px;
+          padding: 10px 20px;
+          background-color: #0074D9;
+          color: #FFF;
+          border: none;
+          cursor: pointer;
+          margin: 10px;
+      }
+      button:hover {
+          background-color: #0056b3;
+      }
+  </style>
 </head>
 <body>
 <h1>Current Score:</h1>
@@ -13,45 +37,45 @@
 </body>
 
 <script type="text/javascript">
-  function getJoshScore() {
-  const apiUrl = 'https://3ydb3m9sxc.execute-api.us-east-1.amazonaws.com/Default/get-score?teamName=josh';
+    function getJoshScore() {
+    const apiUrl = 'https://3ydb3m9sxc.execute-api.us-east-1.amazonaws.com/Default/get-score?teamName=josh';
 
-  // Make a GET request
-  fetch(apiUrl)
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Network response was not ok');
-          }
-          return response.json();
-      })
-      .then(data => {
-          // Display the response data
-          document.getElementById('score').textContent = JSON.stringify(data, null, 2);
-      })
-      .catch(error => {
-          console.error('Error:', error);
-      });
-  }
+    // Make a GET request
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Display the response data
+            document.getElementById('score').textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
 
-  function getJimScore() {
-  const apiUrl = 'https://3ydb3m9sxc.execute-api.us-east-1.amazonaws.com/Default/get-score?teamName=jim';
+    function getJimScore() {
+    const apiUrl = 'https://3ydb3m9sxc.execute-api.us-east-1.amazonaws.com/Default/get-score?teamName=jim';
 
-  // Make a GET request
-  fetch(apiUrl)
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Network response was not ok');
-          }
-          return response.json();
-      })
-      .then(data => {
-          // Display the response data
-          document.getElementById('score').textContent = JSON.stringify(data, null, 2);
-      })
-      .catch(error => {
-          console.error('Error:', error);
-      });
-  }
+    // Make a GET request
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Display the response data
+            document.getElementById('score').textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
 </script>
 
 </html>
