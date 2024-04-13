@@ -9,11 +9,11 @@
 <h1>Current Score:</h1>
 <p id="score"></p>
 <button onclick="getJoshScore()">Get Joshua's score</button>
-<button onclick="getJoshScore()">Get Joshua's score</button>
+<button onclick="getJimScore()">Get Jim's score</button>
 </body>
 
 <script type="text/javascript">
-  function myJavascriptFunction() {
+  function getJoshScore() {
   const apiUrl = 'https://3ydb3m9sxc.execute-api.us-east-1.amazonaws.com/Default/get-score?teamName=josh';
 
   // Make a GET request
@@ -33,7 +33,7 @@
       });
   }
 
-  function myJavascriptFunction() {
+  function getJimScore() {
   const apiUrl = 'https://3ydb3m9sxc.execute-api.us-east-1.amazonaws.com/Default/get-score?teamName=jim';
 
   // Make a GET request
